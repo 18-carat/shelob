@@ -1,0 +1,21 @@
+[package]
+name = "shelob"
+version = "0.1.0"
+edition = "2021"
+authors = ["18-carat"]
+license = "GPL-3.0-or-later"
+description = "Spider to crawl through a certain website"
+repository = "https://github.com/18-carat/shelob"
+
+[dependencies]
+boml = "0.3.1"
+curl = "0.4.46"
+progression = { version = "0.1.15", default_features = false }
+regex-lite = "0.1.5"
+seahash = "4.1.0"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = 3
+panic = "abort"
